@@ -13,10 +13,16 @@ Scaricare i seguenti tool dai siti ufficiali:
 
 ## Installazione
 
+Gitextensions e Fork non hanno bisogno di impostazioni particolari in fase di installazione e si può lasciare il deafult.
+
+Per git e p4merge qui sotto un breve video vi indicherà il default ottimo da speficificare in fase di installazione 
+
 ### Git
 
-### GitExtensions
+![git setupkit wizard](images/git.gif)
 
 ### P4Merge
+
+![p4merge setupkit wizard](images/p4merge.gif)
 
 ## Configurazione

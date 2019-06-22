@@ -1,0 +1,71 @@
+[user]
+	name = {{user.name}}
+	email = {{user.mail}}
+
+[core]
+	autocrlf = true
+	longpaths = true
+	excludesfile = ~/.gitignore
+	editor = gite fileeditor
+
+[credential]
+	helper = manager
+
+[fetch]
+	prune = false
+[pull]
+	rebase = true
+
+[diff]
+	guitool = p4merge
+	tool = vscode
+[difftool "p4merge"]
+	cmd = \"p4merge\" \"$LOCAL\" \"$REMOTE\"
+[difftool "vscode"]
+	cmd = \"code --wait --diff $LOCAL $REMOTE\"
+
+[merge]
+	tool = p4merge
+[mergetool]
+	keepBackup = false
+[mergetool "p4merge"]
+	cmd = \"p4merge\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+
+[rebase]
+	autoStash = false
+[rerere]
+	enabled = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+
+[color]
+	ui = true
+[grep]
+	lineNumber = true
+
+[alias]
+	pull-all = "!for b in $(git for-each-ref refs/heads --format='%(refname)') ; do git checkout ${b#refs/heads/} ; git pull --ff-only ; done"
+	amend = commit --amend
+	fixup = commit --amend --no-edit
+	st = status -sb
+	r = reset HEAD
+	r1 = reset HEAD^
+	r2 = reset HEAD^^
+	rh = reset HEAD --hard
+	rh1 = reset HEAD^ --hard
+	rh2 = reset HEAD^^ --hard
+	co = checkout
+	cob = checkout -b
+	g = grep --break --heading --line-number
+	cp = cherry-pick
+	ec = config --global -e
+	cm = !git add -A && git commit -m
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	undo = reset HEAD^ --mixed
+	wip = !git add -u && git commit -m 'WIP'
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	tree = !git log --graph --decorate --all --oneline
+	ignored-changes = !git ls-files -v . | grep ^S

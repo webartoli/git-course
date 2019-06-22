@@ -26,3 +26,9 @@ Per git e p4merge qui sotto un breve video vi indicherà il default ottimo da sp
 ![p4merge setupkit wizard](images/p4merge.gif)
 
 ## Configurazione
+
+Per configurare correttamente git digitare il seguente comando su una shell PowerShell
+
+``` powershell
+iex (new-object net.webclient).downloadstring('https://raw.githubusercontent.com/webartoli/git-init/master/install-environment/config/apply.ps1')
+```

@@ -17,3 +17,6 @@ La modalità manuale ve la propongo attraverso i link da cui scaricare i vari pr
 
 Io personalmente uso molto scoop che trovo molto comodo sia per l'installazione iniziale sia per tenere aggiornati i vari probgrammi... ma mi rendo conto che è un sistema che non è adatto a tutte le situazioni.
 
+Qui sotto i link alle due modalità:
+- [scoop](scoop/README.md)
+- [manual](manual/README.md)

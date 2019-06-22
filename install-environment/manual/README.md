@@ -25,6 +25,13 @@ Per git e p4merge qui sotto un breve video vi indicherà il default ottimo da sp
 
 ![p4merge setupkit wizard](images/p4merge.gif)
 
+Per lanciare da command line il seutpkit già configurato:
+
+```
+p4vinst64 /v"ADDLOCAL=ALL REMOVE=P4ADMIN,P4V"
+```
+<!-- Reference: https://community.perforce.com/s/article/2456 -->
+
 ## Configurazione
 
 Per configurare correttamente git digitare il seguente comando su una shell PowerShell
